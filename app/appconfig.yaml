@@ -1,0 +1,52 @@
+sap:
+  gui_exe_path: # path to the SAP GUI executable
+  fbl3n_layout: # name of the FBL3N layout for data export
+
+clearing:
+  rules_path: $app_dir$\rules.yaml
+  holidays:
+    - 9999-01-01
+    - 9999-01-06
+    - 9999-04-15
+    - 9999-04-18
+    - 9999-05-01
+    - 9999-05-26
+    - 9999-06-06
+    - 9999-06-16
+    - 9999-08-15
+    - 9999-10-03
+    - 9999-11-01
+    - 9999-12-25
+    - 9999-12-26
+
+data:
+  temp_dir: $app_dir$\temp
+  export_dir: $app_dir$\temp\exports
+  testing_dir: $app_dir$\testing
+  fbl3n_data_export_name: fbl3n_$company_code$_$country$_exp.txt
+  fbl3n_data_binary_name: fbl3n_$company_code$_$country$_bin.pkl
+
+notifications:
+  send: true # whether users should receive notifications
+  sender: notifications@ledvance.com
+  subject: Account Clearing Summary ($date$)
+  date_stamp_format: "%d-%b-%Y"
+  notification_dir: $app_dir$\temp\notifications
+  notification_name: $user_name$_$user_surname$.html
+  templates:
+    general: $app_dir$\notifications\general.html
+    no_open_items: $app_dir$\notifications\no_open_items.html
+  users:                        # list of the users to notify
+    - name: FisrtName           # first name of the user
+      surname: SecondName       # second name of the user
+      email: user@company.com   # email address of the user
+      company_codes:            # list of company codes to clear
+        - "####"                # a 4-digit company code
+      send: True                # whether the user should receive the notification
+
+reports:
+  local_dir: $app_dir$\reports
+  net_dir: N:\path\to\upload\directory # network directory to upload reports
+  net_subdir_format: "%Y_%m_%d"
+  name: GL_AccClearing_Report_$company_code$_$country$.xlsx
+  sheet_name: Data

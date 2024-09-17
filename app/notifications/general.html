@@ -1,0 +1,39 @@
+﻿<HTML>
+<HEAD>
+</HEAD>
+
+<BODY style="font-size: 16px; font-family: Arial">
+
+  <P style="font-size: 16px; color: purple">Dear $user$,<br><br>Account clearing completed, report(s) saved to folder:<br>$report_path$<br><br>
+    Kind Regards,<br><br>LBS automations team
+  </P>
+
+  <DIV style="display: inline-block; margin-top: 38px">
+	
+    <DIV style="width=100%; text-align: center">
+      <P style="font-weight: bold"><SPAN style="font-size: 16px">Summary of items per company code, account and currency</SPAN></P>
+    </DIV>
+	
+    <TABLE style="width: 100%; vertical-align: middle; border-collapse: collapse; text-align: center">
+      <TBODY>
+
+	<TR style="font-weight: bold; background-color: orange; border: purple 2px solid; padding: 5px">
+	  <TH style="border: purple 2px solid; padding: 5px">Company Code</TH>
+	  <TH style="border: purple 2px solid; padding: 5px">Account</TH>
+	  <TH style="border: purple 2px solid; padding: 5px">Currency</TH>
+	  <TH style="border: purple 2px solid; padding: 5px">Left Items</TH>
+	  <TH style="border: purple 2px solid; padding: 5px">Cleared Items</TH>
+	  <TH style="border: purple 2px solid; padding: 5px">Errors</TH>
+	  <TH style="border: purple 2px solid; padding: 5px">Note</TH>
+	</TR>
+
+	<TR><TD>$tbl_rows$</TD></TR>
+
+      </TBODY>
+    </TABLE>
+
+  </DIV>
+
+	
+</BODY>
+<HTML>
